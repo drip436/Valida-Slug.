@@ -1,6 +1,7 @@
-#slugifier.py
 import unicodedata
 import re
+
+
 def slug(text: str) -> str:
     text = unicodedata.normalize("NFKD", text)
     text = "".join(c for c in text if not unicodedata.combining(c))
